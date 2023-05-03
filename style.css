@@ -1,8 +1,158 @@
+@font-face {
+    font-family: "Inconsolata";
+    src: url("https://ggayane.github.io/css-experiments/Inconsolata-VF.ttf");
+    font-weight: 100 900;
+    font-stretch: 50% 200%;
+  }
+
 body {
     height: 100%;
+    color: #FFFFFF;
+    font-size: 8em;
+    font-family: 'Inconsolata';
   }
   
-  ::-webkit-scrollbar-thumb {
+.cursor {
+    left: 0;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    background-color: #f44336;
+    position: absolute;
+    border-radius: 5px;
+  }
+  
+.cursor__follower {
+    transition: transform .4s;
+    width: 6px;
+    height: 6px;
+  }
+
+  
+.vidyut {
+    width: 50px;
+    height: 50px;
+  }
+  
+.cisai {
+    width: 90px;
+  }
+  
+  
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 80px;
+    background-color: #2d2b2b;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 999;
+    width: 100vw;
+  }
+  
+.first-logo {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    flex-grow: 2;
+  }
+  
+.second-logo {
+    flex-grow: 3.3;
+  }
+  
+html {
+    text-decoration: none;
+    background-color: #2d2b2b;
+  }
+  
+.typewriter h1 {
+    color: #fff;
+    font-family: 'Waiting for the Sunrise', cursive;
+    overflow: hidden; 
+    border-right: .15em solid orange; 
+    white-space: nowrap;
+    letter-spacing: .15em; 
+    animation: 
+      typing 3.5s steps(30, end),
+      blink-caret .5s step-end infinite;
+  }
+  
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: red }
+  }
+  
+section {
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    color: #ffff;
+    height: 100vh;
+  }
+  
+.first {
+    cursor: none;
+  }
+  
+h1 {
+    font-size: 70px;
+  }
+  
+h2 {
+    font-family: monospace;
+    font-size: 50px;
+  }
+  
+span, p {
+    font-size: 20px;
+  }
+
+#wrapper {
+    /* width: 90vw; */
+    color: rgb(255,255,255);
+    height: 180px;
+    margin-left: 2em;
+}
+
+#work {
+    font-size: 0.2em;
+    font-weight:900;
+}
+
+#life {
+    font-size: 0.2em;
+    font-weight:100;
+}
+
+#balance {
+   font-size: 0.6em;
+   line-height: 0.3em;
+   font-weight: 400;
+}
+
+.main {
+  display: flex;
+  width: 100%;
+}
+
+#color-sliders {
+  font-size: 2rem;
+  padding-top: 2em;
+  padding-left: 3em;
+}
+
+::-webkit-scrollbar-thumb {
     background-color: #d6dee1;
     border-radius: 20px;
     border: 6px solid transparent;
@@ -27,147 +177,160 @@ body {
   width: 20px;
 }
 
-  .cursor {
-    left: 0;
-    top: 0;
-    width: 10px;
+.size-sec{
+  font-family: 'Courier New', Courier, monospace;
+  border: 2px solid white;
+  border-radius: 15px;
+  padding: 8px;
+}
+
+.red-sec{
+  font-family: 'Courier New', Courier, monospace;
+  border: 2px solid red;
+  border-radius: 15px;
+  padding: 8px;
+}
+
+.green-sec{
+  font-family: 'Courier New', Courier, monospace;
+  border: 2px solid green;
+  border-radius: 15px;
+  padding: 8px;
+}
+
+.blue-sec{
+  font-family: 'Courier New', Courier, monospace;
+  border: 2px solid blue;
+  border-radius: 15px;
+  padding: 8px;
+}
+
+/*--- slider ----*/
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  .slider-red {
+    overflow: hidden;
+    width: 125px;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: white;
+    border-radius: 20px;
+    padding: 1.2px;
+  }
+  
+  .slider-red::-webkit-slider-runnable-track {
     height: 10px;
-    background-color: #f44336;
-    position: absolute;
+    -webkit-appearance: none;
+    color: #13bba4;
+    margin-top: -1px;
+  }
+  
+  .slider-red::-webkit-slider-thumb {
+    width: 10px;
+    -webkit-appearance: none;
+    height: 10px;
+    cursor: ew-resize;
+    background: red;
     border-radius: 5px;
-  }
-  
-  .cursor__follower {
-    transition: transform .4s;
-    width: 6px;
-    height: 6px;
-  }
-  
-  .vidyut {
-    width: 50px;
-    height: 50px;
+    padding: 6px;
+    box-shadow: -80px 0 0 80px rgba(255, 0, 0, 0.5);
   }
 
-  .cisai {
-    width: 90px;
+  .slider-green {
+    overflow: hidden;
+    width: 125px;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: white;
+    border-radius: 20px;
+    padding: 1.2px;
+  }
+  
+  .slider-green::-webkit-slider-runnable-track {
+    height: 10px;
+    -webkit-appearance: none;
+    color: #13bba4;
+    margin-top: -1px;
+  }
+  
+  .slider-green::-webkit-slider-thumb {
+    width: 10px;
+    -webkit-appearance: none;
+    height: 10px;
+    cursor: ew-resize;
+    background: green;
+    border-radius: 5px;
+    padding: 6px;
+    box-shadow: -80px 0 0 80px rgba(0, 255, 0, 0.5);
   }
 
-  
-  nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 80px;
-    background-color: #2d2b2b;
-    display: flex;
-    align-items: center;
-    padding: 0 20px;
-    z-index: 999;
-    width: 100vw;
+  .slider-blue {
+    overflow: hidden;
+    width: 125px;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: white;
+    border-radius: 20px;
+    padding: 1.2px;
   }
   
-  .first-logo {
-    display: flex;
-    gap: 25px;
-    align-items: center;
-    flex-grow: 2;
+  .slider-blue::-webkit-slider-runnable-track {
+    height: 10px;
+    -webkit-appearance: none;
+    color: #13bba4;
+    margin-top: -1px;
   }
   
-  .second-logo {
-    flex-grow: 3.3;
+  .slider-blue::-webkit-slider-thumb {
+    width: 10px;
+    -webkit-appearance: none;
+    height: 10px;
+    cursor: ew-resize;
+    background: blue;
+    border-radius: 5px;
+    padding: 6px;
+    box-shadow: -80px 0 0 80px rgba(0, 0, 255, 0.5);
   }
+}
 
-  html {
-    text-decoration: none;
-    background-color: #2d2b2b;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .typewriter h1 {
-    color: #fff;
-    font-family: 'Waiting for the Sunrise', cursive;
-    overflow: hidden; 
-    border-right: .15em solid orange; 
-    white-space: nowrap;
-    letter-spacing: .15em; 
-    animation: 
-      typing 3.5s steps(30, end),
-      blink-caret .5s step-end infinite;
-  }
-  
-  @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-  }
-  
-  @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: red }
-  }
+.rbg-sec{
+  font-family: 'Courier New', Courier, monospace;
+  padding: 15px;
+}
+.slider-rbg{
+  border-radius: 5px;
+  padding: 6px;
+  font-size: 18px;
+}
 
-  section {
-    padding-top: 50px;
-    padding-left: 50px;
-    padding-right: 50px;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    color: #ffff;
-    height: 100vh;
-    width: 100vw;
+/* @keyframes h2-animation {
+  0%{
+    transform: scale(1);
   }
-  
-  .second{
-    padding-top: 50px;
-    padding-left: 50px;
-    padding-right: 50px;
-    align-items: center;
-    display: flex;
-    color: #ffff;
-    height: 100vh;
-    width: 100vw;
+  50%{
+    transform: scale(1.1);
   }
-  
-  .first {
-    cursor: none;
+  100%{
+    transform: scale(1);
   }
-  
-  h1 {
-    font-size: 70px;
-  }
-  
-  h2 {
-    font-family: monospace;
-    font-size: 50px;
-  }
-  
-  span, p {
-    font-size: 20px;
-  }
+}
+.h2-animate{
+  animation-name: h2-animation;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+} */
 
-  .task-desc-tittle {
-    font-size: 80px;
-    margin-bottom: 22px;
+@keyframes wrapper-animation {
+  0%{
+    transform: translateY(2vh) scale(1);
   }
-
-  .task-desc{
-    font-size: 20px;
-    /*margin-bottom: px;*/
+  100%{
+    transform: translateY(3vh) scale(1);
   }
-
-  .task {
-    font-size: 50px;
-    margin-bottom: 22px;
-  }
-
-  .ui{
-    width: 50%;
-    margin-left: 5%;
-  }
-
-  .task-container {
-    width: 50%;
-    margin-left: 5%;
-  }
+}
+.wrapper{
+  animation-name: wrapper-animation;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}

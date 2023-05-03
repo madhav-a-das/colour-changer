@@ -4,43 +4,71 @@
   <link href="https://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-  <header>
+   <header>
     <nav>
-        <div class="first-logo">
-            <img src="imgs/innspark.png" alt="" class="cisai">
-            <img src="imgs/CISAI logo_v3.png" alt="" class="cisai">
-            <img src="imgs/c_cube.png" alt="" class="vidyut">
-        </div>
-        <div class="second-logo">
-            <img src="imgs/vidyut.png" alt="" class="vidyut">
-        </div>
-    </nav>
-  </header>
-  <section class="first">
-    <h2>Welcome to the</h2>
-    <div class="typewriter">
-      <h1>"Code With Consequences"</h1>
+      <div class="first-logo">
+        <img src="imgs/innspark.png" alt="" class="cisai">
+        <img src="imgs/CISAI logo_v3.png" alt="" class="cisai">
+        <img src="imgs/c_cube.png" alt="" class="vidyut">
     </div>
-    <span>Scroll down for task description ↓</span>
-  </section>
-  <div class="second">
-      <div class="task-container">
-        <div class="task-desc-tittle">Task description</div>
-          <div class="task-desc">Having a cool portfolio just adds up to your personality. So, here is a task for you to make a cool portfolio for yourself. </div> <br><br>
-        <div class="task">Task</div>
-        <p>1. This directory contains a folder "code". You can start with some basic bug fixing and css  <br>
-        2. Make the page responsive.<br>
-        3. Finally add 2 buttons at the end of the description and write appropriate css for them. Be creative with buttons css.<br>
-            (Optional - You can add some animations to the buttons)<br>
-            4. Write a js code to add functionality to your "next" and "previous" buttons. Next button shows the details of the next member of your team and similarly with the previous button<br><br>
+    <div class="second-logo">
+        <img src="imgs/vidyut.png" alt="" class="vidyut">
+    </div>
+    </nav> 
+  </header>
+  <section class="first"> 
+    <h2>Welcome to</h2>
+    <div class="typewriter">
+      <h1>"Team ATLAS"</h1>
+    </div>
+    <span>Scroll down for description ↓</span>
+  </section> 
+  <section class="second">
+    <h2 class="h2-animate">Description</h2>
+    <p>
+        Here one slider changes the size of the word "Aum" & "NAMAH". Similiarly, 
+        the three more slider controls, each with a ranging from 0 to 255, will cahnge tthe color scheme of the text "AUM NAMAH SHIVAYA!".
+        The 'rbg' section show the corresponding colour value.
         <br><br>
-        Remember, Evaulation will be done only on the basis of creativity, but not on the basis of completing the given tasks. So, try to be creative as much as you can.
-        <br><br>
-
-        </p>
+        <em>Change the sliders and see the changes.</em>
+    </p>
+    <div class="main">
+      <div id="color-sliders">
+        <div>
+          <label for="blue-slider"><span class="size-sec">Size</span>:</label>
+          <input type="range" id="slider" min="1" max="9" value=2 onchange="update(this.value);">
+        </div> <br>
+        <div class="red-se">
+          <label style="color: red;" for="red-slider"><span class="red-sec">Red</span> :</label>
+<!--          Todo: Add a slider here (Note: id="red-slider")-->
+          <input class="slider-red" type="range" id="red-slider" min="0" max="255" value=0 onchange="updateColor(this.value);">
+        </div> <br>
+        <div>
+          <label style="color: green;" for="green-slider"><span class="green-sec">Green</span>:</label>
+<!--          Todo: Add a slider here (Note: id="green-slider")-->
+          <input class="slider-green" type="range" id="green-slider" min="0" max="255" value=0 onchange="updateColor(this.value);">
+        </div> <br>
+        <div>
+          <label style="color: blue;" for="blue-slider"><span class="blue-sec">Blue</span> :</label>
+<!--          Todo: Add a slider here (Note: id="blue-slider")-->
+          <input class="slider-blue" type="range" id="blue-slider" min="0" max="255" value=0 onchange="updateColor(this.value);">
+        </div> <br>
+        <div>
+          <label for="rbg"><span class="rbg-sec">rbg</span> :</label>
+          <input class="slider-rbg" type="text" id="rbg-slider" onchange="updateColor(this.value);">
+        </div>
       </div>
-      <img src="imgs/ui.png" alt="ui" class="ui">
+
+      <div class="wrapper" id="wrapper">
+        <div id="color-sec">
+          <span id="work">AUM </span><span id="life">NAMAH</span>
+        </div>
+        <div id="balance">SHIVAYA!</div>
+      </div>
   </div>
+       
+           
+  </section>
   <script  src="script.js"></script>
 </body>
 </html>
